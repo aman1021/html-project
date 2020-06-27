@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>conversions between numbers</title>
+
+	<style type="text/css">
+		.text{
+			font-size: large;
+			font-weight: bold;
+			
+		}
+
+		.deco{
+			text-decoration: underline;
+		}
+
+		.alignment{
+
+			text-align: center;
+		}
+		#div1{
+			width: 100%;
+			height: 100vh;
+			border:5px solid black;
+			background-color: blue;
+		}
+
+		#div2{
+			width: 80%;
+			border:5px solid black;
+			background-color: lightblue;
+			margin: 200px auto;
+			color: black;
+		}
+
+		#div3{
+			padding-left: 500px;
+		}
+
+		#div4{
+			color: black;
+			opacity: none;
+		}
+
+		.value{
+			font-weight: bold;
+			font-family: aerial;
+		}
+
+		.margin{
+			margin-left: 520px;
+
+		}
+
+		.margin1{
+			margin-left: 575px;
+		}
+
+
+	</style>
+	
+</head>
+<body>
+<div id="div1">
+	<div id="div2">
+		<div id="div4">
+		<div class="text" id="div3">Enter The Decimal Number:</div>
+		 <input type="number" id="mynumber" class="margin alignment" ><br>
+		<p class="text alignment deco">click the button to get the conversions.</p>
+
+		<p class="text alignment">The Binary Value is:</p>
+		<p id="demo" class="alignment value">00</p>
+
+		<p class="text alignment">The Hexadecimal Value is:</p>
+		<p id="demo1" class="alignment value">00</p>
+
+		<p class="text alignment">The Octal Value is:</p>
+	     <p id="demo2" class="alignment value">00</p>
+
+		<input type="submit" value="submit"  onclick="myFunction()" class="margin1">
+	</div>
+	</div>
+</div>
+
+	<script type="text/javascript">
+		function myFunction(){
+				let a =  document.getElementById("mynumber").value;
+
+				console.log(a);
+				console.log(typeof a);
+
+				a = Number(a);  //the very important line of code.
+
+				let b = a.toString(2); //BINARY VALUE
+
+				let c = a.toString(16); //HEXADECIMAL
+				
+                let d = a.toString(8);  //OCTAL
+
+				document.getElementById("demo").innerHTML = Number(b);
+				document.getElementById("demo1").innerHTML = c;
+				document.getElementById("demo2").innerHTML = Number(d);
+		}
+
+
+
+	</script>
+
+</body>
+</html>
